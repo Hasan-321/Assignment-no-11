@@ -1,0 +1,37 @@
+ body{
+
+    margin: 0;
+    background:rgb(121, 32, 5);
+}
+.ball{
+    display: inline-block;
+    position: relative;
+    background: gray;
+    border: 5px dotted rgb(0, 225, 255);
+    width: 100px;
+    height: 100px;
+    border-radius: 60px;
+    box-shadow: 0px 0px 20px 2px;
+    animation: rotate 1s cubic-bezier( 0.4, 0.15, 0.65, 0.99)  infinite  , movement 3s cubic-bezier(0.12, 0.28, 1, 1.22)  infinite both ;
+    
+}
+@keyframes movement {
+ from{
+    left: 0;
+    opacity: 10;
+ }    
+ to{
+    left: 100%;
+    opacity: 0;
+ }
+}
+@keyframes rotate {
+    from{
+      transform: rotate(0deg);
+    }
+    to{
+     transform: rotate(720deg)
+
+    }
+    
+}
